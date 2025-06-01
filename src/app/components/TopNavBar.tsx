@@ -18,15 +18,20 @@ export const TopNavBar = () => {
       )}
     >
       <div className="flex h-10 w-full items-center justify-between">
-        <Link href="/">
+        <Link href="/" className="text-purple-500 font-bold">
+        Genera tu CV
+        {/*
           <span className="sr-only">GeneraTuCV</span>
+        
           <Image
             src={logoSrc}
             alt="Genera Tu CV Logo"
             className="h-8 w-full"
             priority
           />
+         */}
         </Link>
+        {/*
         <nav
           aria-label="Site Nav Bar"
           className="flex items-center gap-2 text-sm font-medium"
@@ -53,6 +58,7 @@ export const TopNavBar = () => {
             />
           </div>
         </nav>
+        */}
       </div>
     </header>
   );
