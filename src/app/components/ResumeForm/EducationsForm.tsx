@@ -21,7 +21,7 @@ export const EducationsForm = () => {
   const showBulletPoints = useAppSelector(selectShowBulletPoints(form));
 
   return (
-    <Form form={form} addButtonText="Add School">
+    <Form form={form} addButtonText="Agregar Escuela">
       {educations.map(({ school, degree, gpa, date, descriptions }, idx) => {
         const handleEducationChange = (
           ...[
@@ -47,29 +47,29 @@ export const EducationsForm = () => {
             showMoveUp={showMoveUp}
             showMoveDown={showMoveDown}
             showDelete={showDelete}
-            deleteButtonTooltipText="Delete school"
+            deleteButtonTooltipText="Eliminar escuela"
           >
             <Input
-              label="School"
+              label="Escuela"
               labelClassName="col-span-4"
               name="school"
-              placeholder="Cornell University"
+              placeholder="Stanford University"
               value={school}
               onChange={handleEducationChange}
             />
             <Input
-              label="Date"
+              label="Fecha"
               labelClassName="col-span-2"
               name="date"
-              placeholder="May 2018"
+              placeholder="Mayo 2018"
               value={date}
               onChange={handleEducationChange}
             />
             <Input
-              label="Degree & Major"
+              label="Título y especialidad"
               labelClassName="col-span-4"
               name="degree"
-              placeholder="Bachelor of Science in Computer Engineering"
+              placeholder="Bachiller en Ciencias de la computación"
               value={degree}
               onChange={handleEducationChange}
             />
@@ -83,10 +83,10 @@ export const EducationsForm = () => {
             />
             <div className="relative col-span-full">
               <BulletListTextarea
-                label="Additional Information (Optional)"
+                label="Información Adicional (Opcional)"
                 labelClassName="col-span-full"
                 name="descriptions"
-                placeholder="Free paragraph space to list out additional activities, courses, awards etc"
+                placeholder="Espacio de párrafo libre para enumerar actividades adicionales, cursos, premios, etc."
                 value={descriptions}
                 onChange={handleEducationChange}
                 showBulletPoints={showBulletPoints}

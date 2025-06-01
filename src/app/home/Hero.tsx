@@ -15,7 +15,7 @@ export const Hero = () => {
         <p className="mt-3 text-lg lg:mt-5 lg:text-xl">
           Este es un proyecto open source, construido con ❤️ para nuestros estudiantes de Capacitadero. 
         </p>
-        <Link href="/resume-import" className="mt-6 lg:mt-14">
+        <Link href="/resume-builder" className="mt-6 lg:mt-14">
           Ir a crear CV <span aria-hidden="true"></span>
         </Link>
         <p className="mt-3 text-sm text-gray-600 lg:mt-36">
