@@ -15,7 +15,7 @@ export const ShowIconButton = ({
   show: boolean;
   setShow: (show: boolean) => void;
 }) => {
-  const tooltipText = show ? "Ocultar sección" : "Mostrar section";
+  const tooltipText = show ? "Ocultar sección" : "Mostrar sección";
   const onClick = () => {
     setShow(!show);
   };
