@@ -73,6 +73,7 @@ export const EducationsForm = () => {
               value={degree}
               onChange={handleEducationChange}
             />
+            {/*
             <Input
               label="GPA"
               labelClassName="col-span-2"
@@ -81,6 +82,7 @@ export const EducationsForm = () => {
               value={gpa}
               onChange={handleEducationChange}
             />
+            */}
             <div className="relative col-span-full">
               <BulletListTextarea
                 label="Información Adicional (Opcional)"

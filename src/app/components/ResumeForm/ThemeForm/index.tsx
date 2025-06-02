@@ -36,6 +36,7 @@ export const ThemeForm = () => {
             Estilo del documento
           </h1>
         </div>
+      {/* 
         <div>
           <InlineInput
             label="Color"
@@ -71,6 +72,7 @@ export const ThemeForm = () => {
             handleSettingsChange={handleSettingsChange}
           />
         </div>
+      */}
         <div>
           <InlineInput
             label="Tamaño de letra (pt)"

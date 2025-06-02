@@ -63,6 +63,8 @@ const ResumeControlBar = ({
         className="ml-1 flex items-center gap-1 rounded-md border border-gray-300 px-3 py-0.5 hover:bg-gray-100 lg:ml-8"
         href={instance.url!}
         download={fileName}
+        aria-label="Descargar el documento en formato PDF"
+        role="button"
       >
         <ArrowDownTrayIcon className="h-4 w-4" />
         <span className="whitespace-nowrap">Descargar documento</span>

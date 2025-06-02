@@ -44,6 +44,8 @@ export const ResumeForm = () => {
         <ProfileForm />
         {formsOrder.map((form) => {
           const Component = formTypeToComponent[form];
+          //console.log(form);
+          console.log(Component);
           return <Component key={form} />;
         })}
         <ThemeForm />

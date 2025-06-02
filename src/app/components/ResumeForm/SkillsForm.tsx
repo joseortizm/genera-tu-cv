@@ -19,7 +19,7 @@ export const SkillsForm = () => {
   const { featuredSkills, descriptions } = skills;
   const form = "skills";
   const showBulletPoints = useAppSelector(selectShowBulletPoints(form));
-  const themeColor = useAppSelector(selectThemeColor) || "#38bdf8";
+  const themeColor = useAppSelector(selectThemeColor) || "#333333";
 
   const handleSkillsChange = (field: "descriptions", value: string[]) => {
     dispatch(changeSkills({ field, value }));
@@ -48,13 +48,14 @@ export const SkillsForm = () => {
             onChange={handleSkillsChange}
             showBulletPoints={showBulletPoints}
           />
-          <div className="absolute left-[4.5rem] top-[0.07rem]">
+          <div className="absolute left-[10.5rem] top-[0.07rem]">
             <BulletListIconButton
               showBulletPoints={showBulletPoints}
               onClick={handleShowBulletPoints}
             />
           </div>
         </div>
+      {/*  
         <div className="col-span-full mb-4 mt-6 border-t-2 border-dotted border-gray-200" />
         <InputGroupWrapper
           label="Habilidades destacadas (Opcional)"
@@ -78,7 +79,9 @@ export const SkillsForm = () => {
             circleColor={themeColor}
           />
         ))}
+      */} 
       </div>
+
     </Form>
   );
 };
