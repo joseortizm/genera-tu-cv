@@ -18,11 +18,12 @@ export const Hero = () => {
         <Link href="/resume-builder" className="mt-6 lg:mt-14">
           Ir a crear CV <span aria-hidden="true"></span>
         </Link>
-        <p className="mt-3 text-sm text-gray-600 lg:mt-36">
-          ¿Quieres colaborar con el proyecto? <Link target="_blank" href="https://github.com/joseortizm/genera-tu-cv" className="underline underline-offset-2">
-            Ir al repositorio de GitHub
-          </Link>.
+        <p className="mt-3 text-lg text-gray-600 lg:mt-36">
+          ¿Quieres colaborar con el proyecto? 
         </p>
+        <Link target="_blank" href="https://github.com/joseortizm/genera-tu-cv" className="underline underline-offset-2">
+            Ir al repositorio de GitHub
+        </Link>
       </div>
       {/*
       <FlexboxSpacer maxWidth={100} minWidth={50} className="hidden lg:block" />
