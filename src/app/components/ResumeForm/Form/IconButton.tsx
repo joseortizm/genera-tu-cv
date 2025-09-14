@@ -15,7 +15,7 @@ export const ShowIconButton = ({
   show: boolean;
   setShow: (show: boolean) => void;
 }) => {
-  const tooltipText = show ? "Ocultar sección" : "Mostrar sección";
+  const tooltipText = show ? "Ocultar este contenido en tu CV" : "Mostrar este contenido en tu CV";
   const onClick = () => {
     setShow(!show);
   };
@@ -39,7 +39,7 @@ export const MoveIconButton = ({
   size?: "small" | "medium";
   onClick: (type: MoveIconButtonType) => void;
 }) => {
-  const tooltipText = type === "up" ? "Mover arriba" : "Mover abajo";
+  const tooltipText = type === "up" ? "Subir este contenido en tu CV" : "Bajar este contenido en tu CV";
   const sizeClassName = size === "medium" ? "h-6 w-6" : "h-4 w-4";
   const Icon = type === "up" ? ArrowSmallUpIcon : ArrowSmallDownIcon;
 

@@ -29,9 +29,12 @@ import {
 } from "lib/redux/resumeSlice";
 
 /**
- * BaseForm is the bare bone form, i.e. just the outline with no title and no control buttons.
- * ProfileForm uses this to compose its outline.
- */
+  - BaseForm es el formato básico, es decir, solo el esquema, sin título ni botones de control.
+  - ProfileForm** utiliza esto para componer su esquema.
+  - TODO: En la futura implementación, mejorar los botones de subir, bajar, ocultar y eliminar
+    para que no generen confusión a los usuarios que utilizan lectores de pantalla.
+    Los archivos clave para esto son index.tsx e iconButton.tsx, junto con otros archivos similares a "**".
+  */
 export const BaseForm = ({
   children,
   className,
