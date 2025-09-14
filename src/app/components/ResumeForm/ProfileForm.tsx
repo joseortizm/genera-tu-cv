@@ -25,10 +25,10 @@ export const ProfileForm = () => {
           onChange={handleProfileChange}
         />
         <Textarea
-          label="Objetivo"
+          label="Resumen profesional"
           labelClassName="col-span-full"
           name="summary"
-          placeholder="Programadora con interés en crear tecnología que ayude a reducir las barreras educativas."
+          placeholder="Ej: Profesional en Negocios Internacionales con experiencia en gestión de proyectos y desarrollo de aplicaciones digitales..."
           value={summary}
           onChange={handleProfileChange}
         />
@@ -52,7 +52,7 @@ export const ProfileForm = () => {
           label="Website"
           labelClassName="col-span-4"
           name="url"
-          placeholder="miblog.com"
+          placeholder="Ej: http://joseortizm.com/"
           value={url}
           onChange={handleProfileChange}
         />
