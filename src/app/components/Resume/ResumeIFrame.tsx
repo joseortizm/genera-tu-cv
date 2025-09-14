@@ -102,6 +102,8 @@ const ResumeIframe = ({
           initialContent={iframeInitialContent}
           // key is used to force component to re-mount when document size changes
           key={isA4 ? "A4" : "LETTER"}
+          aria-label="Contenido interactivo del CV"
+          role="document"
         >
           {children}
         </Frame>
