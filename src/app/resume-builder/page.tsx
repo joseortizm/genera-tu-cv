@@ -9,12 +9,15 @@ export default function Create() {
     <Provider store={store}>
       <main className="relative h-full w-full overflow-hidden bg-gray-50">
         <div className="grid grid-cols-3 md:grid-cols-6">
-          <div className="col-span-3">
+          <h1 className="sr-only">Crear tu CV</h1>
+          <section aria-labelledby="resumeFormTitle" className="col-span-3">
+            <h2 id="resumeFormTitle" className="sr-only">Formulario de CV</h2>
             <ResumeForm />
-          </div>
-          <div className="col-span-3">
+          </section>
+          <section aria-labelledby="resumePreviewTitle" className="col-span-3">
+            <h2 id="resumePreviewTitle" className="sr-only">Vista previa del CV</h2>
             <Resume />
-          </div>
+          </section>
         </div>
       </main>
     </Provider>
