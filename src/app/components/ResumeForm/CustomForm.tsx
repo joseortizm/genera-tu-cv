@@ -36,7 +36,7 @@ export const CustomForm = () => {
             onChange={handleCustomChange}
             showBulletPoints={showBulletPoints}
           />
-          <div className="absolute left-[7.7rem] top-[0.07rem]">
+          <div className="absolute left-[15.6rem] top-[0.07rem]">
             <BulletListIconButton
               showBulletPoints={showBulletPoints}
               onClick={handleShowBulletPoints}
@@ -45,5 +45,6 @@ export const CustomForm = () => {
         </div>
       </div>
     </Form>
+
   );
 };

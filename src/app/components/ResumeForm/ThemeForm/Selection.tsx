@@ -8,6 +8,10 @@ import {
 import { getAllFontFamiliesToLoad } from "components/fonts/lib";
 import dynamic from "next/dynamic";
 
+/**
+ * Componente Selection se utiliza dentro de otros componentes como FontFamilySelections,
+ * FontSizeSelections, y DocumentSizeSelections para mostrar botones interactivos.
+ */
 const Selection = ({
   selectedColor,
   isSelected,
@@ -29,7 +33,7 @@ const Selection = ({
   };
 
   return (
-    <div
+    <button
       className="flex w-[105px] cursor-pointer items-center justify-center rounded-md border border-gray-300 py-1.5 shadow-sm hover:border-gray-400 hover:bg-gray-100"
       onClick={onClick}
       style={isSelected ? selectedStyle : style}
@@ -37,15 +41,22 @@ const Selection = ({
         if (["Enter", " "].includes(e.key)) onClick();
       }}
       tabIndex={0}
+      aria-pressed={isSelected}
     >
       {children}
-    </div>
+    </button>
   );
 };
+
+/*
+* SelectionsWrapper: Este componente simplemente agrupa los botones
+*/
 
 const SelectionsWrapper = ({ children }: { children: React.ReactNode }) => {
   return <div className="mt-2 flex flex-wrap gap-3">{children}</div>;
 };
+
+
 
 const FontFamilySelections = ({
   selectedFontFamily,
@@ -142,18 +153,16 @@ export const DocumentSizeSelections = ({
   return (
     <SelectionsWrapper>
       {["Carta", "A4"].map((type, idx) => {
+        const isSelected = type === selectedDocumentSize;
         return (
           <Selection
             key={idx}
             selectedColor={themeColor}
-            isSelected={type === selectedDocumentSize}
+            isSelected={isSelected}
             onClick={() => handleSettingsChange("documentSize", type)}
           >
             <div className="flex flex-col items-center">
               <div>{type}</div>
-              <div className="text-xs">
-                {type === "Carta" ? "(US, Canada)" : "(Otros países)"}
-              </div>
             </div>
           </Selection>
         );
@@ -161,3 +170,4 @@ export const DocumentSizeSelections = ({
     </SelectionsWrapper>
   );
 };
+
