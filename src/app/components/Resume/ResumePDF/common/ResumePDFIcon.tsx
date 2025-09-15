@@ -27,7 +27,7 @@ const ICONS_PATHS = {
   url_linkedin: LINKEDIN_PATH_D,
 };
 
-type IconType = keyof typeof ICONS_PATHS;
+export type IconType = keyof typeof ICONS_PATHS;
 
 interface SVGIconProps {
   pathD: string;
